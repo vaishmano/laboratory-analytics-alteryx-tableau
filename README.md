@@ -167,7 +167,15 @@ Refresh data source to the exported Excel
 
 Explore filters: State, Test Panel, Result Flag, Age Group
 
-👩‍💻 Author
+# Preview
+Alteryx:
+<img width="1776" height="631" alt="image" src="https://github.com/user-attachments/assets/b448d9fb-e581-48a9-b95a-641decb77f43" />
+
+Tableau dashboard:
+<img width="1243" height="786" alt="image" src="https://github.com/user-attachments/assets/9a2cf423-1d53-4362-98d8-297414e112af" />
+
+
+# 👩‍💻 Author
 
 Vaishnavi Manogaran
 Master’s Student – International Information Systems (FAU)

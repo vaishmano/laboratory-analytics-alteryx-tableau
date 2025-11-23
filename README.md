@@ -1,7 +1,7 @@
 # laboratory-analytics-alteryx-tableau
 End-to-end diagnostic laboratory analytics project using Alteryx for data engineering and Tableau for dashboard visualization. Includes data cleaning, feature engineering, predictive rolling averages, and an interactive performance dashboard.
 
-📘 Laboratory Insights & Performance Dashboard
+# 📘 Laboratory Insights & Performance Dashboard
 Built Using Alteryx + Tableau
 📌 Project Overview
 
@@ -24,31 +24,14 @@ An interactive Tableau dashboard
 
 This showcases strong capability in ETL, analytics, BI visualization, and data storytelling.
 
-🧰 Technologies Used
+# 🧰 Technologies Used
 Category	Tools
 Data Engineering	Alteryx Designer
 Visualization	Tableau Desktop
 Documentation	Word / PDF
 Version Control	GitHub
-📂 Project Structure
-├── data/
-│   ├── vibrant_tests.csv
-│   ├── vibrant_patients.csv
-│   └── vibrant_output.xlsx
-│
-├── alteryx-workflow/
-│   └── lab_processing_workflow.yxmd
-│
-├── tableau/
-│   └── lab_insights_dashboard.twbx
-│
-├── documentation/
-│   ├── Alteryx_Workflow_Documentation.docx
-│   └── Dashboard_Description.pdf
-│
-└── README.md
 
-🛠️ Alteryx Data Engineering Workflow
+# 🛠️ Alteryx Data Engineering Workflow
 
 The data was prepared using Alteryx Designer, performing transformation, enrichment, and predictive feature creation.
 
@@ -85,7 +68,7 @@ ProcessingBucket	Time-to-process grouped into 0–60, 60–120, 120+ mins
 
 Exported final cleaned dataset to Excel for Tableau.
 
-📊 Tableau Visualizations
+# 📊 Tableau Visualizations
 1️⃣ Test Result Trend Over Time
 
 A line chart showing how average test results change each year, revealing long-term patterns, spikes, and patient severity trends.
@@ -117,14 +100,10 @@ Bar chart showing how many tests fall into each processing-time category:
 
 Helps identify operational efficiency and bottlenecks.
 
-📊 Dashboard Overview
-Dashboard Name:
+# 📊 Dashboard Overview
+Dashboard Name: Laboratory Insights & Performance Dashboard
 
-Laboratory Insights & Performance Dashboard
-
-Purpose:
-
-To provide a comprehensive view of diagnostic trends, patient distribution, test workloads, predictive behavior, and operational performance.
+Purpose: To provide a comprehensive view of diagnostic trends, patient distribution, test workloads, predictive behavior, and operational performance.
 
 Dashboard Includes:
 
@@ -138,7 +117,7 @@ Rolling average vs actual results
 
 Turnaround time performance
 
-⭐ Key Insights
+# ⭐ Key Insights
 
 Certain years show higher average test results → possible rise in abnormal cases
 
@@ -150,7 +129,7 @@ Rolling averages reveal stable underlying trends
 
 Majority of tests fall into the 120+ mins bucket → operational improvement opportunity
 
-🚀 How to Use
+# 🚀 How to Use
 Run Alteryx Workflow
 
 Open .yxmd in Alteryx

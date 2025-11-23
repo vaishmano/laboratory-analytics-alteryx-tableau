@@ -1,0 +1,728 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>vibrant_tests.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="PatientID" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="OrderID" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="TestCode" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="TestName" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="ResultValue" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="Flag" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="ResultDate" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="ProcessingTimeMins" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="SampleQuality" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="TechnicianID" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+            <Field name="PriorResultAvg" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="150" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="PatientID" selected="True" />
+            <Field field="OrderID" selected="True" />
+            <Field field="TestCode" selected="True" />
+            <Field field="TestName" selected="True" />
+            <Field field="ResultValue" selected="True" />
+            <Field field="Flag" selected="True" />
+            <Field field="ResultDate" selected="True" />
+            <Field field="ProcessingTimeMins" selected="True" />
+            <Field field="SampleQuality" selected="True" />
+            <Field field="TechnicianID" selected="True" />
+            <Field field="PriorResultAvg" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="PatientID" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="Int16" />
+            <Field name="OrderID" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="Int32" />
+            <Field name="TestCode" size="12" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="String" />
+            <Field name="TestName" size="16" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="String" />
+            <Field name="ResultValue" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="Double" />
+            <Field name="Flag" size="6" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="String" />
+            <Field name="ResultDate" size="10" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="String" />
+            <Field name="ProcessingTimeMins" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="Byte" />
+            <Field name="SampleQuality" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="Double" />
+            <Field name="TechnicianID" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="Int16" />
+            <Field name="PriorResultAvg" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_tests.csv" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="258" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="False" />
+          <RemoveNullColumns value="False" />
+          <RemoveTabsLineBreaksAndDuplicates value="False" />
+          <RemoveLeadingAndTrailingWhitespace value="False" />
+          <RemoveAllWhitespaces value="False" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="PatientID" selected="False" />
+            <Field value="OrderID" selected="False" />
+            <Field value="TestCode" selected="False" />
+            <Field value="TestName" selected="False" />
+            <Field value="ResultValue" selected="False" />
+            <Field value="Flag" selected="False" />
+            <Field value="ResultDate" selected="False" />
+            <Field value="ProcessingTimeMins" selected="False" />
+            <Field value="SampleQuality" selected="True" />
+            <Field value="TechnicianID" selected="False" />
+            <Field value="PriorResultAvg" selected="False" />
+            <Field value="*Unknown" selected="False" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="False" />
+          <Checkbox_ReplaceNumericColumns value="True" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="False" />
+          <ReplaceWithZero value="True" />
+          <CheckBox_ModifyCase value="False" />
+          <ModifyCase value="none" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="366" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeParse([ResultDate],&quot;%Y-%m-%d&quot;)&#xA;" field="ResultDate" size="10" type="String" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[ResultDate = DateTimeParse([ResultDate],"%Y-%m-%d")
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="474" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[ResultValue] - [PriorResultAvg]" field="DeltaFromPrior" size="8" type="Double" enabled="true" />
+            <FormulaField expression="IF Abs([DeltaFromPrior]) &gt; 30 THEN 1 ELSE 0 ENDIF" field="IsOutlier" size="2" type="Int16" enabled="true" />
+            <FormulaField expression="IF [ProcessingTimeMins] &lt;= 60 THEN &quot;0-60 mins&quot;&#xA;ELSEIF [ProcessingTimeMins] &lt;= 120 THEN &quot;60-120 mins&quot;&#xA;ELSE &quot;120+ mins&quot;&#xA;ENDIF&#xA;" field="ProcessingBucket" size="1073741823" type="V_WString" enabled="true" />
+            <FormulaField expression="DateTimeFormat([ResultDate], &quot;%Y-%m-%d&quot;)" field="ResultDay" size="10" type="Date" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DeltaFromPrior = [ResultValue] - [PriorResultAvg]
+IsOutlier = IF Abs([DeltaFromP...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>vibrant_patients.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="PatientID" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="V_String" />
+            <Field name="Age" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="V_String" />
+            <Field name="State" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="V_String" />
+            <Field name="InsuranceType" size="254" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="186" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="PatientID" selected="True" />
+            <Field field="Age" selected="True" />
+            <Field field="Gender" selected="True" />
+            <Field field="State" selected="True" />
+            <Field field="InsuranceType" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="PatientID" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="Int16" />
+            <Field name="Age" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="Byte" />
+            <Field name="Gender" size="6" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="String" />
+            <Field name="State" size="2" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="String" />
+            <Field name="InsuranceType" size="8" source="File: V:\Alteryx\Vibrant America Demo\input data\vibrant_patients.csv" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DataCleansePro.DataCleansePro">
+        <Position x="306" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RemoveNullRows value="False" />
+          <RemoveNullColumns value="False" />
+          <RemoveTabsLineBreaksAndDuplicates value="False" />
+          <RemoveLeadingAndTrailingWhitespace value="False" />
+          <RemoveAllWhitespaces value="False" />
+          <RemoveHTMLTags value="False" />
+          <RemoveInvisibleCharacters value="False" />
+          <Fields>
+            <Field value="PatientID" selected="False" />
+            <Field value="Age" selected="False" />
+            <Field value="Gender" selected="False" />
+            <Field value="State" selected="True" />
+            <Field value="InsuranceType" selected="False" />
+            <Field value="*Unknown" selected="False" />
+          </Fields>
+          <RemoveLetters value="False" />
+          <RemoveNumbers value="False" />
+          <RemovePunctuation value="False" />
+          <Letters value="" />
+          <Numbers value="" />
+          <Punctuations value="" />
+          <Exceptions value="" />
+          <Checkbox_ReplaceStringColumns value="True" />
+          <Checkbox_ReplaceNumericColumns value="False" />
+          <radioButton_ReplaceNullwithBlanks value="True" />
+          <radioButton_ReplaceBlankswithNulls value="False" />
+          <radioButton_ReplaceNullwithZero value="True" />
+          <radioButton_ReplaceZerowithNulls value="False" />
+          <ReplaceWithBlanks value="True" />
+          <ReplaceWithZero value="False" />
+          <CheckBox_ModifyCase value="False" />
+          <ModifyCase value="none" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDataCleanse" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="474" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Age] &lt; 30 THEN &quot;Under 30&quot;&#xA;ELSEIF [Age] &lt; 50 THEN &quot;30-49&quot;&#xA;ELSE &quot;50+&quot;&#xA;ENDIF&#xA;" field="AgeGroup" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AgeGroup = IF [Age] &lt; 30 THEN "Under 30"
+ELSEIF [Age] &lt; 50 THEN "30-49"
+ELSE "50...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="678" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="PatientID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="PatientID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_PatientID" selected="True" input="Left_" />
+                <SelectField field="Left_OrderID" selected="True" input="Left_" />
+                <SelectField field="Left_TestCode" selected="True" input="Left_" />
+                <SelectField field="Left_TestName" selected="True" input="Left_" />
+                <SelectField field="Left_ResultValue" selected="True" input="Left_" />
+                <SelectField field="Left_Flag" selected="True" input="Left_" />
+                <SelectField field="Left_ResultDate" selected="True" input="Left_" />
+                <SelectField field="Left_ProcessingTimeMins" selected="True" input="Left_" />
+                <SelectField field="Left_SampleQuality" selected="True" input="Left_" />
+                <SelectField field="Left_TechnicianID" selected="True" input="Left_" />
+                <SelectField field="Left_PriorResultAvg" selected="True" input="Left_" />
+                <SelectField field="Left_DeltaFromPrior" selected="True" input="Left_" />
+                <SelectField field="Left_IsOutlier" selected="True" input="Left_" />
+                <SelectField field="Left_ProcessingBucket" selected="True" input="Left_" />
+                <SelectField field="Left_ResultDay" selected="True" input="Left_" />
+                <SelectField field="Right_PatientID" selected="True" rename="Right_PatientID" input="Right_" />
+                <SelectField field="Right_Age" selected="True" input="Right_" />
+                <SelectField field="Right_Gender" selected="True" input="Right_" />
+                <SelectField field="Right_State" selected="True" input="Right_" />
+                <SelectField field="Right_InsuranceType" selected="True" input="Right_" />
+                <SelectField field="Right_AgeGroup" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="714" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ivanh\AppData\Local\Temp\Alteryx\Engine_26980_5faf4a2e28614911a64ca51de38b8c45_\Engine_26980_c0b6e11fb4d4449a94a3d2b112bbd13a~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="726" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ivanh\AppData\Local\Temp\Alteryx\Engine_26980_5faf4a2e28614911a64ca51de38b8c45_\Engine_26980_dea5309f75af4cc5acdb261e17e5d170~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="678" y="90" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Join Left - tests without patient match</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="678" y="186" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Join Right - patients with no tests</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="978" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>PatientID</UpdateField_Name>
+          <CreateField_Name>RollingAvg3</CreateField_Name>
+          <CreateField_Type>Double</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>NULL</OtherRows>
+          <NumRows value="2" />
+          <Expression><![CDATA[IF IsNull([Row-1:ResultValue]) THEN
+  [ResultValue]
+ELSEIF IsNull([Row-2:ResultValue]) THEN
+  ([Row-1:ResultValue] + [ResultValue]) / 2
+ELSE
+  ([Row-2:ResultValue] + [Row-1:ResultValue] + [ResultValue]) / 3
+ENDIF
+]]></Expression>
+          <GroupByFields>
+            <Field field="PatientID" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF IsNull([Row-1:ResultValue]) THEN
+  [ResultValue]
+ELSEIF Is...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="870" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="PatientID" order="Ascending" />
+            <Field field="ResultDate" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>PatientID - Ascending
+ResultDate - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ResultDate" selected="True" type="Date" size="10" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1158" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">V:\Alteryx\Vibrant America Demo\output data\vibrant_alteryx_output.xlsx|||output</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <MipTenantId />
+            <PreserveFormat>False</PreserveFormat>
+            <MipSensitivity />
+            <UNCLocal>False</UNCLocal>
+            <SkipFieldNames>False</SkipFieldNames>
+            <SuppressBlankFile>False</SuppressBlankFile>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>vibrant_alteryx_output.xlsx
+Query=output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1098" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ivanh\AppData\Local\Temp\Alteryx\Engine_26980_5faf4a2e28614911a64ca51de38b8c45_\Engine_26980_941863c1b9ff4ab991ecaf4aabb0023d~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="13" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Left" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Right" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Join" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>VM Workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="d17f8cbc-9e68-4d06-b76f-f1ec51c9f5e9" />
+      <Telemetry>
+        <PreviousWorkflowId value="9ef5bb58-0f7b-4eca-9c3c-9cd356675ca1" />
+        <OriginWorkflowId value="9ef5bb58-0f7b-4eca-9c3c-9cd356675ca1" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
